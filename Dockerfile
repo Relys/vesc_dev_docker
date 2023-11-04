@@ -34,7 +34,7 @@ USER ${USER_NAME}
 #RUN export DISPLAY=:99
 #RUN export XDG_RUNTIME_DIR=/tmp/runtime-root
 COPY get_vesc.sh /vesc_dev_scripts
-COPY get_vesc_dado.sh /vesc_dev_scripts
+COPY get_vesc_float.sh /vesc_dev_scripts
 COPY build_vesc.sh /vesc_dev_scripts
 COPY ./docker-entrypoint.sh /
 
