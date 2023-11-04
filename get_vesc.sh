@@ -1,13 +1,13 @@
-cd /
+cd /vesc_dev
 git clone https://github.com/vedderb/bldc.git
-cd /bldc
+cd /vesc_dev/bldc
 #git checkout release_6_02
-cd /
+cd /vesc_dev
 git clone https://github.com/vedderb/vesc_tool.git
-cd /vesc_tool
+cd /vesc_dev/vesc_tool
 #git checkout release_6_02
-cd /
+cd /vesc_dev
 git clone https://github.com/vedderb/vesc_pkg.git
-cd /vesc_pkg
+cd /vesc_dev/vesc_pkg
 #git checkout release_6_02
-cd /
+cd /vesc_dev
