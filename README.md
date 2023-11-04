@@ -12,6 +12,7 @@ docker run -it --name vesc_dev -v \\wsl.localhost\Ubuntu-22.04\home\neo\vesc_dev
 
 
 docker start -ia vesc_dev
-./get_vesc_dado.sh
+./get_vesc.sh #For Official
+./get_vesc_onewheel.sh # For OneWheel
 ./build_vesc.sh
 ```
