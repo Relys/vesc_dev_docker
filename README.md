@@ -1,4 +1,4 @@
-# vesc_docker_build
+# vesc_dev_docker
 Full toolchain setup for VESC controllers
 
 ```
