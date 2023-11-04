@@ -10,10 +10,9 @@ find . -type f -exec ln -s -- "$PWD"/'{}' /vesc_dev/vesc_tool/res/firmwares/'{}'
 cd /vesc_dev/vesc_tool
 ./build_lin
 
-#unzip /vesc_dev/vesc_tool/build/lin/vesc_tool_platinum_linux.zip -d /tmp
+unzip /vesc_dev/vesc_tool/build/lin/vesc_tool_platinum_linux.zip -d /tmp
 
-#file=$(find /tmp -name "vesc_tool*")
-file=$(find /vesc_dev/vesc_tool/build/lin/ -name "vesc_tool*")
+file=$(find /tmp -name "vesc_tool*")
 
 
 if [[ -n $file ]]; then
