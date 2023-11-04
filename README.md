@@ -13,6 +13,6 @@ docker run -it --name vesc_dev -v \\wsl.localhost\Ubuntu-22.04\home\neo\vesc_dev
 
 docker start -ia vesc_dev
 ./get_vesc.sh #For Official
-./get_vesc_onewheel.sh # For OneWheel
+./get_vesc_float.sh # For self balacing mobility devices
 ./build_vesc.sh
 ```
