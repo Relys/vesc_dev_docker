@@ -17,13 +17,22 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     python3 python-is-python3 git wget make zip nano vim xvfb \
     build-essential gcc-arm-none-eabi libgl-dev libxcb-xinerama0 \
 	qtbase5-dev libqt5svg5-dev qtpositioning5-dev qtconnectivity5-dev libqt5gamepad5-dev libqt5serialport5-dev qtquickcontrols2-5-dev
-	
+
+ENV USER=${USER_NAME}
+
+RUN echo "vesc_dev ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/${USER_NAME}
+RUN chmod 0440 /etc/sudoers.d/${USER_NAME}
+
+RUN chown -R ${USER_NAME}:${USER_NAME} /${USER_NAME}
+RUN mkdir /vesc_dev_scripts
+RUN chown -R vesc_dev:vesc_dev /vesc_dev_scripts
+USER ${USER_NAME}
+
 #Vesc Express stuff
 #RUN apt install -y flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
 #RUN Xvfb :99 &
 #RUN export DISPLAY=:99
 #RUN export XDG_RUNTIME_DIR=/tmp/runtime-root
-RUN mkdir /vesc_dev_scripts
 COPY get_vesc.sh /vesc_dev_scripts
 COPY get_vesc_dado.sh /vesc_dev_scripts
 COPY build_vesc.sh /vesc_dev_scripts
