@@ -1,5 +1,5 @@
 # vesc_dev_docker
-Full toolchain setup for VESC controllers
+Full toolchain setup for VESC controllers. Builds bldc, vesc_tool and vesc_pkg
 
 ```
 #Install Docker Desktop
