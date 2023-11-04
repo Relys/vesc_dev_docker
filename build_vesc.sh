@@ -1,5 +1,5 @@
 cd /vesc_dev/bldc
-#make arm_sdk_install
+make arm_sdk_install
 make all_fw_package
 python package_firmware
 
