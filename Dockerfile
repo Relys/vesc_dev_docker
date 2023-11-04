@@ -14,7 +14,7 @@ RUN groupadd ${USER_NAME} --gid ${USER_GID}\
 RUN apt-get update && apt-get install --no-install-recommends -y \
     sudo \
     bash-completion ca-certificates \
-    python3 python-is-python3 git wget make zip nano vim xvfb \
+    python3 python-is-python3 git wget make zip unzip nano vim xvfb \
     build-essential libgl-dev libxcb-xinerama0 \
 	qtbase5-dev libqt5svg5-dev qtpositioning5-dev qtconnectivity5-dev libqt5gamepad5-dev libqt5serialport5-dev qtquickcontrols2-5-dev qtbase5-private-dev
 
