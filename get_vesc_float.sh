@@ -12,3 +12,8 @@ git clone https://github.com/surfdado/vesc_pkg.git
 cd /vesc_dev/vesc_pkg
 git checkout bmsdev
 cd /vesc_dev
+git clone https://github.com/contactsimonwilson/vesc_express.git
+cd /vesc_dev/vesc_express
+git checkout hardware-targets
+cd /vesc_dev
+git clone https://github.com/vedderb/nrf52_vesc.git
