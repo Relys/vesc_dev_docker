@@ -1,6 +1,6 @@
 cd /vesc_dev/bldc
 make arm_sdk_install
-sudo ln -s /vesc_dev/bldc/tools/gcc-arm-none-eabi-7-2018-q2-update /usr/local/gcc-arm-none-eabi-7-2018-q2-update
+#sudo ln -s /vesc_dev/bldc/tools/gcc-arm-none-eabi-7-2018-q2-update /usr/local/gcc-arm-none-eabi-7-2018-q2-update
 make all_fw_package
 python package_firmware
 

@@ -29,7 +29,6 @@ if [ ! -d "/vesc_dev/esp-idf-v5.0.2" ]; then
 	/usr/bin/python3 /vesc_dev/esp-idf-v5.0.2/tools/idf_tools.py install
 	/usr/bin/python3 /vesc_dev/esp-idf-v5.0.2/tools/idf_tools.py install-python-env
 fi
-source /vesc_dev/esp-idf-v5.0.2/export.sh
 #Xvfb :99 &
 #export DISPLAY=:99
 #export XDG_RUNTIME_DIR=/tmp/runtime-root

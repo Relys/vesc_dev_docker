@@ -16,7 +16,8 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     bash-completion ca-certificates \
     python3 python-is-python3 python3.10-venv libusb-1.0-0 git wget make zip unzip nano vim xvfb cmake \
     build-essential gcc-arm-none-eabi libnewlib-arm-none-eabi libgl-dev libxcb-xinerama0 \
-	qtbase5-dev libqt5svg5-dev qtpositioning5-dev qtconnectivity5-dev libqt5gamepad5-dev libqt5serialport5-dev qtquickcontrols2-5-dev qtbase5-private-dev
+	qtbase5-dev libqt5svg5-dev qtpositioning5-dev qtconnectivity5-dev libqt5gamepad5-dev libqt5serialport5-dev qtquickcontrols2-5-dev qtbase5-private-dev p7zip-full autoconf automake autopoint bison flex \
+	libgdk-pixbuf2.0-dev gperf intltool libtool-bin lzip ruby gcc-multilib g++-multilib libssl-dev python3-pip libicu-dev
 
 ENV USER=${USER_NAME}
 
@@ -30,6 +31,14 @@ RUN chown -R ${USER_NAME}:${USER_NAME} /${USER_NAME}
 RUN mkdir /vesc_dev_scripts
 RUN chown -R vesc_dev:vesc_dev /vesc_dev_scripts
 USER ${USER_NAME}
+
+RUN pip install Mako mako-render
+
+#RUN export PATH=$PATH:/home/vesc_dev_scripts/.local/bin
+RUN cd /vesc_dev_scripts
+RUN git clone https://github.com/mxe/mxe.git
+RUN cd /vesc_dev/mxe
+RUN make qtbase -j 8
 
 COPY get_vesc.sh /vesc_dev_scripts
 COPY get_vesc_float.sh /vesc_dev_scripts
