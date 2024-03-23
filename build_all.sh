@@ -1,5 +1,5 @@
 cd /vesc_dev
-./get_vesc_float.sh
+./get_vesc.sh
 ./build_vesc.sh
 ./build_vesc_express.sh
 cd /vesc_dev/nrf52_vesc
