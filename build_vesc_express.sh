@@ -1,5 +1,4 @@
 cd /vesc_dev/vesc_express
-source /vesc_dev/esp-idf-v5.0.2/export.sh
 idf.py fullclean
 idf.py build -DHW_NAME="Devkit C3"
 cp /vesc_dev/vesc_express/build/vesc_express.bin /vesc_dev/vesc_builds/vesc_express/vesc_express_Devkit_C3.bin
