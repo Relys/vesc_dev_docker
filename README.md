@@ -2,12 +2,16 @@
 Full toolchain setup for VESC controllers. Builds bldc, vesc_tool, vesc_pkg, vesc_express and nrf52_vesc
 
 ```
-#Install WSL2
+#Open up command prompt and install WSL2
 wsl --install
 wsl.exe --install Ubuntu-24.04
 #Install Docker Desktop
 https://docs.docker.com/desktop/install/windows-install/
 #Open Docker Desktop -> Settings -> Resources -> WSL Intigration -> Enable integration with additional distros: Ubuntu-24.04
+bash
+cd ~
+git clone docker build . -t vesc_dev   
+cd vesc_dev_docker
 docker volume create vesc_dev
 docker build . -t vesc_dev   
 
