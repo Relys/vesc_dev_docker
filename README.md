@@ -4,7 +4,7 @@ Full toolchain setup for VESC controllers. Builds bldc, vesc_tool, vesc_pkg, ves
 ```
 #Open up command prompt and install WSL2
 wsl --install
-wsl.exe --install Ubuntu-24.04
+wsl.exe --install Ubuntu-22.04
 #Install Docker Desktop
 https://docs.docker.com/desktop/install/windows-install/
 #Open Docker Desktop -> Settings -> Resources -> WSL Intigration -> Enable integration with additional distros: Ubuntu-24.04
@@ -16,14 +16,13 @@ docker volume create vesc_dev
 docker build . -t vesc_dev   
 
 #Change to your path
-docker run -it --name vesc_dev -v \\wsl.localhost\Ubuntu-22.04\home\neo\vesc_dev:/vesc_dev vesc_dev
+mkdir ~/vesc_dev
+docker run -it --name vesc_dev -v ~/vesc_dev:/vesc_dev vesc_dev
 
 #to start back up and get into the container
 docker start -ia vesc_dev
 
 ./build_all.sh #builds everthing for float and stores binaries in /vesc_dev/vesc_builds
-
-./get_vesc.sh #For Official
-./get_vesc_float.sh # For self balacing mobility devices
+./get_vesc.sh
 ./build_vesc.sh
 ```
