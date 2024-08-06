@@ -7,7 +7,7 @@ wsl --install
 wsl.exe --install Ubuntu-22.04
 #Install Docker Desktop
 https://docs.docker.com/desktop/install/windows-install/
-#Open Docker Desktop -> Settings -> Resources -> WSL Intigration -> Enable integration with additional distros: Ubuntu-24.04
+#Open Docker Desktop -> Settings -> Resources -> WSL Intigration -> Enable integration with additional distros: Ubuntu-22.04
 bash
 cd ~
 git clone docker build . -t vesc_dev   
